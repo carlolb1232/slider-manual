@@ -1,0 +1,92 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-container{
+  width: 40vw;
+  height: 75vh;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img-container{
+  width: 100%;
+  height: 80%;
+  position: relative;
+}
+
+
+.img-container img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.acl-right{
+  animation-name: acelerate-right;
+  animation-duration: 2s;
+}
+.acl-left{
+  animation-name: acelerate-left;
+  animation-duration: 2s;
+}
+
+@keyframes acelerate-right {
+  from {transform: translateX(0px)} 
+  to {transform: translateX(700px)}
+}
+@keyframes acelerate-left {
+  from {transform: translateX(0px)} 
+  to {transform: translateX(-700px)}
+}
+.buttons-container{
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 2px solid black;
+}
+
+.buttons-container i{
+  padding: 15px;
+  font-size: 60px;
+  border: 5px solid black;
+  border-radius: 47px;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.buttons-container i:hover{
+  transform: scale(1.1);
+}
+
+#left{
+  background-color: greenyellow;
+}
+
+#right{
+  background-color: rgb(104, 104, 207);
+}
+
+#left:hover{
+  background-color: rgb(2, 73, 49);
+  color: white;
+}
+
+#right:hover{
+  background-color: rgb(2, 2, 66);
+  color: white;
+}
